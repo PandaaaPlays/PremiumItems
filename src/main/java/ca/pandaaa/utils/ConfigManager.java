@@ -3,6 +3,7 @@ package ca.pandaaa.utils;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 
 import java.util.List;
 import java.util.Set;
@@ -62,6 +63,11 @@ public class ConfigManager {
         } catch(Exception exception) {
             return null;
         }
+    }
+
+    // Returns the owner of the skull (only applicable if material = PLAYER_HEAD) //
+    public String getItemSkullOwner(String itemName) {
+        return items.getString("items." + itemName + ".owner");
     }
 
     // Returns true if the item should be enchanted //
