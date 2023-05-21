@@ -6,11 +6,11 @@ import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -71,16 +71,26 @@ public class Items {
     // Creates and returns the ItemStack //
     private void createItemStack() {
         item = new ItemStack(material);
+
         itemMeta = item.getItemMeta();
-        if(itemMeta == null)
+
+
+        if (itemMeta == null)
             return;
         itemMeta.setDisplayName(itemStackName);
         itemMeta.setLore(lore);
-        if(isEnchanted) {
+        if (isEnchanted) {
             itemMeta.addEnchant(Enchantment.DURABILITY, 1, true);
             itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         }
-        item.setItemMeta(itemMeta);
+
+        if(material.equals(Material.PLAYER_HEAD)) {
+            SkullMeta skullMeta = (SkullMeta) itemMeta;
+            skullMeta.setOwningPlayer(Bukkit.getPlayer(config.getItemSkullOwner(itemName)));
+            item.setItemMeta(skullMeta);
+        } else {
+            item.setItemMeta(itemMeta);
+        }
     }
 
     // Creates the item settings and messages attributes //
