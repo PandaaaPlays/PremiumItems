@@ -1,0 +1,17 @@
+name: PremiumItems
+version: 1.0.0
+author: Pandaaa
+main: ca.pandaaa.premiumitems.PremiumItems
+api-version: 1.16
+commands:
+  premiumitems:
+    aliases: [premiumitem, pi, pitem, pitems]
+    description: PremiumItems commands.
+
+permissions:
+  premiumitems.config:
+    default: op
+    description: Permission to do /pi [list, reload]
+  premiumitems.admin:
+    default: op
+    description: Permission to do /pi give

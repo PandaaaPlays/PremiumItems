@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="PremiumItems">
+    <output-path>$PROJECT_DIR$/../../../Minecraft Server/plugins</output-path>
+    <root id="archive" name="PremiumItems.jar">
+      <element id="module-output" name="PremiumItems" />
+    </root>
+  </artifact>
+</component>

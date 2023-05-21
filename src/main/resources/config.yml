@@ -1,0 +1,44 @@
+# Use this document to configure the settings of your PremiumItems Plugin.
+# If you require any assistance with the plugin, please contact me on discord (https://discord.io/AnimalPlugins).
+#   _____         ___ _                 _   _
+#  |     |___ ___|  _|_|___ _ _ ___ ___| |_|_|___ ___
+#  |   --| . |   |  _| | . | | |  _| .'|  _| | . |   |
+#  |_____|___|_|_|_| |_|_  |___|_| |__,|_| |_|___|_|_|
+#                      |___|
+
+# The message displayed when the command provided is invalid.
+unknown-command: "&c&l[!] &cUnknown Command."
+
+# The message displayed when the sender of the command does not have the permission to execute the command.
+no-permission: "&c&l[!] &cYou do not have enough permission to do this."
+
+# The message displayed as the title of every item in the listing command. You may use %item_id% for the id of the item (e.g : rank)
+list-name: "&f&l- %item% &f:"
+
+# The messages displayed for all the descriptions of item in the listing command.
+list-description: "  &5&l* %description%"
+
+# The message displayed when the give command arguments are incorrect (e.g : No item is provided).
+incorrect-give-arguments: "&c&l[!] &cIncorrect argument(s) : /premiumitems give [player] [item] [number]"
+
+# The message displayed when the give command is used with an invalid player username.
+# This message will also trigger if the player is offline!
+incorrect-give-player: "&c&l[!] &cIncorrect player : %player% is not online."
+
+# The message displayed when the give command is used with an unexisting item name.
+incorrect-give-item: "&c&l[!] &cIncorrect item : %item% is unknown."
+
+# The message displayed when the give command is used with an incorrect number format.
+incorrect-give-number: "&c&l[!] &cIncorrect number : %number% is not an integer."
+
+# The message displayed when the give command is used with a number that is not between 1 and 64.
+unallowed-give-number: "&c&l[!] &cIncorrect number : Amount must be between 1 and 64."
+
+# The message displayed to the receiver of the item. You may use %item_id% for the id of the item (e.g : rank)
+item-received-message: "&5&lPrem&d&lium&8&lIte&7&lms &7&l>> &dYou received %amount%x &5%item%&d from &5%sender%&d."
+
+# The message displayed to the sender of the item. You may use %item_id% for the id of the item (e.g : rank)
+item-sent-message: "&5&lPrem&d&lium&8&lIte&7&lms &7&l>> &5%receiver%&d successfully received %amount%x &5%item%&d."
+
+# The message displayed when the configuration of the plugin is reloaded.
+plugin-reload: "&5&lPrem&d&lium&8&lIte&7&lms &7&l>> &dPlugin Reloaded."
