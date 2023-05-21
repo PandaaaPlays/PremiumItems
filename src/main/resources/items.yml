@@ -66,3 +66,17 @@ items:
     messages:
       - "&3&l[&bMagic Spell&3&l] &8&lFire&6&lBall"
     sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+  head:
+    name: "&4&lPla&a&lyer &8&lHe&7&lad"
+    description:
+      - "&fThis item provides your &a&mhead&f!"
+    lore:
+      - "&7&o(Click on this item to get your head|)"
+    item: PLAYER_HEAD
+    owner: 'PandaaaPlays'
+    enchanted: true
+    one-time-use: false
+    console-commands:
+      - "give %player% minecraft:player_head{SkullOwner:%player%}"
+    sound: ENTITY_EXPERIENCE_ORB_PICKUP
