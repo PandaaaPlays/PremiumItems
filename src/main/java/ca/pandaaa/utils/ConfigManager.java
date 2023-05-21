@@ -67,7 +67,11 @@ public class ConfigManager {
 
     // Returns the owner of the skull (only applicable if material = PLAYER_HEAD) //
     public String getItemSkullOwner(String itemName) {
-        return items.getString("items." + itemName + ".owner");
+        try {
+            return items.getString("items." + itemName + ".owner");
+        } catch(Exception exception) {
+            return null;
+        }
     }
 
     // Returns true if the item should be enchanted //

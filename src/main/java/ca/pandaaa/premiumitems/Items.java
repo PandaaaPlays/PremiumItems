@@ -72,12 +72,8 @@ public class Items {
     private void createItemStack() {
         item = new ItemStack(material);
 
-        if(material.equals(Material.PLAYER_HEAD)) {
-            SkullMeta itemMeta = (SkullMeta) item.getItemMeta();
-            itemMeta.setOwningPlayer(Bukkit.getPlayer(config.getItemSkullOwner(itemName)));
-        } else {
-            itemMeta = item.getItemMeta();
-        }
+        itemMeta = item.getItemMeta();
+
 
         if (itemMeta == null)
             return;
@@ -87,8 +83,14 @@ public class Items {
             itemMeta.addEnchant(Enchantment.DURABILITY, 1, true);
             itemMeta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         }
-        item.setItemMeta(itemMeta);
 
+        if(material.equals(Material.PLAYER_HEAD)) {
+            SkullMeta skullMeta = (SkullMeta) itemMeta;
+            skullMeta.setOwningPlayer(Bukkit.getPlayer(config.getItemSkullOwner(itemName)));
+            item.setItemMeta(skullMeta);
+        } else {
+            item.setItemMeta(itemMeta);
+        }
     }
 
     // Creates the item settings and messages attributes //

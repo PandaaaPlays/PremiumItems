@@ -68,7 +68,7 @@ items:
     sound: ENTITY_EXPERIENCE_ORB_PICKUP
 
   head:
-    name: "&4&lPla&a&lyer &8&lHe&7&lad"
+    name: "&2&lPla&a&lyer &8&lHe&7&lad"
     description:
       - "&fThis item provides your &a&mhead&f!"
     lore:
