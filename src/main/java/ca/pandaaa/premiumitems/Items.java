@@ -86,11 +86,11 @@ public class Items {
 
         if(material.equals(Material.PLAYER_HEAD)) {
             SkullMeta skullMeta = (SkullMeta) itemMeta;
-            skullMeta.setOwningPlayer(Bukkit.getPlayer(config.getItemSkullOwner(itemName)));
-            item.setItemMeta(skullMeta);
-        } else {
-            item.setItemMeta(itemMeta);
+            // TODO Deprecated
+            skullMeta.setOwningPlayer(Bukkit.getOfflinePlayer(config.getItemSkullOwner(itemName)));
+            itemMeta = skullMeta;
         }
+        item.setItemMeta(itemMeta);
     }
 
     // Creates the item settings and messages attributes //

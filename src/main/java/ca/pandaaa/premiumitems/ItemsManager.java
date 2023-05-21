@@ -1,8 +1,10 @@
 package ca.pandaaa.premiumitems;
 
 import ca.pandaaa.utils.ConfigManager;
+import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.inventory.meta.SkullMeta;
 
 import java.util.HashMap;
 import java.util.Set;
@@ -34,7 +36,10 @@ public class ItemsManager {
 
     // Returns true if the itemStack exists //
     public boolean containsItemMeta(ItemMeta itemMeta) {
-
+        if(itemMeta instanceof SkullMeta) {
+            // The itemMeta stores the texture but the list does not... (this removes the texture) //
+            ((SkullMeta) itemMeta).setOwningPlayer(((SkullMeta) itemMeta).getOwningPlayer());
+        }
         return itemMetas.containsKey(itemMeta);
     }
 
