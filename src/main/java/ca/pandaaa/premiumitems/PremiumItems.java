@@ -115,6 +115,5 @@ public class PremiumItems extends JavaPlugin {
     // TODO Cooldowns on Item use?
     // TODO Number of Item use?
     // TODO Placeholder API?
-    // TODO Player Heads (Owner name)
     // TODO Item %item% and %item_id% in item description, item messages and broadcast?
 }
